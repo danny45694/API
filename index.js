@@ -14,6 +14,13 @@ async function fetchData(){
         
         imgElement.src = pokemonSprite;
         imgElement.style.display = "block";
+
+        let pokeName = data.name;
+        const pokeSpecies = document.getElementById("pokeSpecies");
+
+        pokeNameCap = pokeName.charAt(0).toUpperCase() + pokeName.slice(1);
+        pokeSpecies.textContent = pokeNameCap;
+        pokeSpecies.style.display = "block";
     }
     catch(error){
         console.error(error);
